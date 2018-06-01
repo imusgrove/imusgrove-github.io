@@ -75,3 +75,38 @@ class StickyNavigation {
 
 new StickyNavigation();
 
+// scroll fade
+
+new WOW().init();
+
+$( ".wow" ).addClass( "fadeInUp" );
+
+// header animation
+var animationType = function(myTarget, myClass) {
+	var delay = 3;
+	var colors = ['#003134', '#005872', '#4D9AA9', '#0E7286', '#002029'];
+	var myTextToSplit = document.getElementsByClassName(myTarget);
+	for (var i = 0; i < myTextToSplit.length; i++) {
+	  /* Val for the win  */
+	  var myTag = myTextToSplit[i].innerHTML.split(/(<[^>]+>)/g);
+	  var html = '';
+  
+	  //console.log(myTag);
+	  for (var j = 0; j < myTag.length; j++) {
+  
+		html += (!myTag[j].includes('<') && !myTag[j].includes('\n') ? myTag[j].split('').join('</span><span class=\'' + myClass + ' \' >') : myTag[j]);
+  
+	  }
+	  myTextToSplit[i].innerHTML = "<span class=\'" + myClass + " \'>" + html + "</span>";
+  
+	}
+	var elemDelay = document.getElementsByClassName(myClass);
+	for (i = 0; i < elemDelay.length; i++) {
+	  elemDelay[i].style.animationDelay = delay - (delay / (i + delay)) + "s";
+	  elemDelay[i].style.color = colors[i % colors.length];
+  
+	}
+	console.log(elemDelay.length);
+  
+  }
+  animationType('textAnim', 'textAnim1');

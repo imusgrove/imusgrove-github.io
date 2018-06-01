@@ -1,8 +1,17 @@
 .flex-container{
     display: flex;
     height: 600px;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: wrap;
+    justify-content: space-around;
     align-items: center;
     align-content: space-between;
+
 }
+
+#skillsRow {
+	padding-bottom: 5rem;
+}
+
+
+
+

@@ -1,1 +1,71 @@
 /* CSS code for the Header section. */
+// h1{
+//     position: relative;
+//     top:80px;
+//     margin : auto;
+//     text-align: center;  
+//   }
+  
+  .textAnim1{
+    position: relative;
+    opacity:0;
+    display: inline-block;
+    font-size: 2.5em;
+    margin:2px;
+  }
+  .textAnim1:nth-child(2n+1){
+    animation : slideDown 5s infinite alternate;
+  }
+  .textAnim1:nth-child(2n){
+    animation : slideTop 5s infinite alternate ;
+  }
+   @keyframes slideTop {
+       from {
+    transform:translateY(-100px);
+      }
+     10% {
+        opacity:0;
+    transform:translateY(-100px);
+      }
+     30%{
+       opacity:1;
+        transform: translateY(00px);
+     }
+     60%{
+       opacity:1;
+        transform: translateY(00px);
+     }
+     90% {
+        opacity:0;
+         transform:translateY(-100px);
+      }
+      to {
+        opacity:0;
+         transform:translateY(-100px);
+      }
+  }
+  @keyframes slideDown{
+    from {
+      transform:translateY(100px);
+      }
+    10%{
+       opacity:0;
+      transform:translateY(100px);
+      }
+      30% {
+        opacity:1;
+        transform:translateY(0px);
+      }
+    60%
+    {
+        opacity:1;
+        transform:translateY(0px);
+      }
+    90%
+    {    opacity:0;
+         transform:translateY(100px);
+      }
+    to{
+       transform:translateY(100px);
+    }
+  }
