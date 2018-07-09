@@ -137,6 +137,10 @@ a {
 #skillsRow {
   padding-bottom: 5rem; }
 
+#tab-portfolio {
+  background-color: #1f1e1e;
+  color: #eee; }
+
 body {
   font-family: "Century Gothic", 'Lato', sans-serif; }
 
